@@ -19,13 +19,60 @@ function Home() {
       desc: "Our products are carefully chosen for durability and excellence. We work with trusted suppliers to ensure everything we sell meets high standards—because we believe you deserve only the best when it comes to quality and satisfaction.",
     },
   ];
+
+  const testimonials = [
+    {
+      name: "Jerome Bell",
+      title: "Web Designer",
+      rating: 4,
+      quote:
+        "Lorem ipsum dolor sit amet consectetur the adipiscing elit vestibulum viverra eget felis interdum fusce odio lacus.",
+    },
+    {
+      name: "Annette Black",
+      title: "Dog Trainer",
+      rating: 4,
+      quote:
+        "Lorem ipsum dolor sit amet consectetur the adipiscing elit vestibulum viverra eget felis interdum fusce odio lacus.",
+    },
+    {
+      name: "Ralph Edwards",
+      title: "UI/UX Designer",
+      rating: 4,
+      quote:
+        "Lorem ipsum dolor sit amet consectetur the adipiscing elit vestibulum viverra eget felis interdum fusce odio lacus.",
+    },
+  ];
+
+  const StarRating = ({ count }) => (
+    <div className="text-yellow-400 mb-2">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <i
+          key={i}
+          className={`ri-star-${i < count ? "fill" : "line"} mr-1`}
+        ></i>
+      ))}
+    </div>
+  );
+
+
+
+  
   return (
     <>
       <Layout>
-        <div className="w-full flex flex-row items-start justify-between h-[90vh]">
+        <div
+          className="w-full flex flex-row items-start justify-between h-[90vh]"
+          style={{
+            backgroundImage: `url('/images/backhero.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <div className="w-[50%] pt-24 px-12 flex flex-col items-start justify-center gap-4">
             <h1
-              className="text-4xl font-medium text-[#16b43d] "
+              className="text-4xl font-medium text-[#ffffff] "
               style={{
                 fontFamily: "Rowdies",
                 fontWeight: 400,
@@ -34,7 +81,7 @@ function Home() {
             >
               Tradition in Every Touch
             </h1>
-            <p>
+            <p className="text-[#ffffff] text-[16px]">
               Each item in our store is carefully selected to bring you quality,
               style, and value. We focus on offering products that meet your
               everyday needs while adding comfort and convenience to your life.
@@ -47,11 +94,11 @@ function Home() {
             </button>
           </div>
           <div className="w-[50%] pt-2">
-            <img
-              src="/images/girls4.jpg"
+            {/* <img
+              src="/images/hero5.jpg"
               alt="Handcrafted Products"
               style={{ width: "800px", height: "85vh" }}
-            />
+            /> */}
           </div>
         </div>
         <section className="py-16 text-center bg-white">
@@ -80,6 +127,31 @@ function Home() {
             ))}
           </div>
         </section>
+
+        <div
+          className="bg-cover bg-center py-16 px-4 text-center"
+          style={{ backgroundImage: `url('/images/backreview1.jpg')` }}
+        >
+          <h3 className="text-sm uppercase bg-black text-white px-4 py-1 inline-block mb-3">
+            Testimonials
+          </h3>
+          <h2 className="text-4xl font-bold mb-12 text-white">
+            Client Feedback
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {testimonials.map((item, idx) => (
+              <div key={idx} className="bg-white p-6 shadow-lg relative">
+                <StarRating count={item.rating} />
+                <h3 className="text-lg font-bold">{item.name}</h3>
+                <p className="text-sm text-gray-600 mb-4">{item.title}</p>
+                <p className="text-gray-700 text-sm">{item.quote}</p>
+                <div className="absolute top-4 right-4 text-3xl text-yellow-600">
+                  <i className="ri-double-quotes-l"></i>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </Layout>
     </>
   );
