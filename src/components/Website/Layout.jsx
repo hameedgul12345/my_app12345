@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 function Layout({ children }) {
   const location = useLocation();
+  const [showProfile, setShowProfile] = useState(false);
+  
   const links = [
     {
       link: "/",
@@ -42,7 +44,7 @@ function Layout({ children }) {
             alt=""
           />
         </div>
-        <nav>
+        <nav className="flex items-center justify-end w-full">
           <ul className="flex space-x-4">
             {links.map((link) => (
               <li key={link.link}>
@@ -66,6 +68,78 @@ function Layout({ children }) {
               </li>
             ))}
           </ul>
+          {/* <img
+            src="/images/backhero.jpg"
+            onClick={() => setShowProfile(!showProfiile)}
+            className="w-8 h-8 rounded-full ml-4"
+            alt=""
+          />
+          <div
+            className={`${
+              showProfiile ? "block" : "hidden"
+            } absolute right-4 top-20 bg-white shadow-lg rounded-lg p-4 w-48 `}
+          >
+            <div className="flex flex-col justify-between">
+             <div className="flex flex-row justify-start items-center gap-4">
+               <i className="ri-file-user-fill"></i>
+              <h1>my profile </h1>
+             </div>
+              <div className="flex flex-row justify-start items-center gap-4">
+                <i className="ri-luggage-cart-fill"></i> <h1>My Cart</h1>
+              </div>
+               <div className="flex flex-row justify-start items-center gap-4">
+                <i className="ri-dashboard-3-fill"></i> <h1>Go to Dashboard</h1>
+              </div>
+              <div className="flex flex-row justify-start items-center gap-4">
+                <i class="ri-logout-circle-r-fill"></i> <h1>Logout</h1>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="relative z-50">
+      {/* Profile Avatar */}
+      <img
+        src="/images/backhero.jpg"
+        onClick={() => setShowProfile(!showProfile)}
+        className="w-8 h-8 rounded-full ml-4 cursor-pointer transition-transform duration-300 hover:scale-110"
+        alt="Profile"
+      />
+
+      {/* Dropdown Menu */}
+      <div
+        className={`absolute right-4 top-20 bg-white shadow-lg rounded-lg p-4 w-48 transform transition-all duration-300 ease-in-out ${
+          showProfile
+            ? 'opacity-100 scale-100 translate-y-0'
+            : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col gap-3">
+          {/* My Profile */}
+          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+            <i className="ri-file-user-fill text-green-500"></i>
+            <h1 className="text-sm font-medium">My Profile</h1>
+          </div>
+
+          {/* My Cart */}
+          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+            <i className="ri-luggage-cart-fill text-green-500"></i>
+            <h1 className="text-sm font-medium">My Cart</h1>
+          </div>
+
+          {/* Go to Dashboard */}
+          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+            <i className="ri-dashboard-3-fill text-green-500"></i>
+            <h1 className="text-sm font-medium">Dashboard</h1>
+          </div>
+
+          {/* Logout */}
+          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+            <i className="ri-logout-circle-r-fill text-red-500"></i>
+            <h1 className="text-sm font-medium text-red-500">Logout</h1>
+          </div>
+        </div>
+      </div>
+    </div>
         </nav>
       </header>
       {children}
