@@ -4,7 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 function Layout({ children }) {
   const location = useLocation();
   const [showProfile, setShowProfile] = useState(false);
-  
+  const[icon, setIcon] = useState(true)
+
   const links = [
     {
       link: "/",
@@ -44,7 +45,7 @@ function Layout({ children }) {
             alt=""
           />
         </div>
-        <nav className="flex items-center justify-end w-full">
+        <nav className="hidden md:flex items-center justify-end w-full">
           <ul className="flex space-x-4">
             {links.map((link) => (
               <li key={link.link}>
@@ -97,51 +98,82 @@ function Layout({ children }) {
           </div> */}
 
           <div className="relative z-50">
-      {/* Profile Avatar */}
-      <img
-        src="/images/backhero.jpg"
-        onClick={() => setShowProfile(!showProfile)}
-        className="w-8 h-8 rounded-full ml-4 cursor-pointer transition-transform duration-300 hover:scale-110"
-        alt="Profile"
-      />
+            {/* Profile Avatar */}
+            <img
+              src="/images/backhero.jpg"
+              onClick={() => setShowProfile(!showProfile)}
+              className="w-8 h-8 rounded-full ml-4 cursor-pointer transition-transform duration-300 hover:scale-110"
+              alt="Profile"
+            />
 
-      {/* Dropdown Menu */}
-      <div
-        className={`absolute right-4 top-20 bg-white shadow-lg rounded-lg p-4 w-48 transform transition-all duration-300 ease-in-out ${
-          showProfile
-            ? 'opacity-100 scale-100 translate-y-0'
-            : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
-        }`}
-      >
-        <div className="flex flex-col gap-3">
-          {/* My Profile */}
-          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
-            <i className="ri-file-user-fill text-green-500"></i>
-            <h1 className="text-sm font-medium">My Profile</h1>
-          </div>
+            {/* Dropdown Menu */}
+            <div
+              className={`absolute right-4 top-20 bg-white shadow-lg rounded-lg p-4 w-48 transform transition-all duration-300 ease-in-out ${
+                showProfile
+                  ? "opacity-100 scale-100 translate-y-0"
+                  : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+              }`}
+            >
+              <div className="flex flex-col gap-3">
+                {/* My Profile */}
+                <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+                  <i className="ri-file-user-fill text-green-500"></i>
+                  <h1 className="text-sm font-medium">My Profile</h1>
+                </div>
 
-          {/* My Cart */}
-          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
-            <i className="ri-luggage-cart-fill text-green-500"></i>
-            <h1 className="text-sm font-medium">My Cart</h1>
-          </div>
+                {/* My Cart */}
+                <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+                  <i className="ri-luggage-cart-fill text-green-500"></i>
+                  <h1 className="text-sm font-medium">My Cart</h1>
+                </div>
 
-          {/* Go to Dashboard */}
-          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
-            <i className="ri-dashboard-3-fill text-green-500"></i>
-            <h1 className="text-sm font-medium">Dashboard</h1>
-          </div>
+                {/* Go to Dashboard */}
+                <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+                  <i className="ri-dashboard-3-fill text-green-500"></i>
+                  <h1 className="text-sm font-medium">Dashboard</h1>
+                </div>
 
-          {/* Logout */}
-          <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
-            <i className="ri-logout-circle-r-fill text-red-500"></i>
-            <h1 className="text-sm font-medium text-red-500">Logout</h1>
+                {/* Logout */}
+                <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
+                  <i className="ri-logout-circle-r-fill text-red-500"></i>
+                  <h1 className="text-sm font-medium text-red-500">Logout</h1>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+       
         </nav>
+        {icon?<i className="ri-menu-line" onClick={()=>setIcon(!icon)}></i>:<i className="ri-menu-2-line" onClick={()=>setIcon(!icon)}></i>}
+
       </header>
+       <aside className={`${icon?'w-64 py-6 px-4':'w-0 overflow-hidden'} transform transition duration-300 ease-in-out h-screen bg-white shadow-md fixed top-0 left-0 flex flex-col  z-40`}>
+      
+      <ul className="flex flex-col space-y-4">
+        {links.map((link) => (
+          <li key={link.link}>
+            <Link
+              to={link.link}
+              className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors duration-300 ${
+                location.pathname === link.link
+                  ? "text-[#4DD36F] bg-gray-100"
+                  : "text-gray-700 hover:text-[#4DD36F] hover:bg-gray-100"
+              }`}
+            >
+              <span
+                className="text-[16px]"
+                style={{
+                  fontFamily: "Rowdies",
+                  fontWeight: 100,
+                  fontStyle: "normal",
+                }}
+              >
+                {link.title}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </aside>
       {children}
       <footer className="bg-white border-t border-gray-200 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">

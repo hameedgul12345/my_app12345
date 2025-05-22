@@ -62,7 +62,7 @@ function Home() {
     <>
       <Layout>
         <div
-          className="w-full flex flex-row items-start justify-between h-[90vh]"
+          className="w-full flex flex-row items-start justify-between min-h-[90vh] pb-8"
           style={{
             backgroundImage: `url('/images/backhero.jpg')`,
             backgroundSize: "cover",
@@ -70,7 +70,7 @@ function Home() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="w-[50%] pt-24 px-12 flex flex-col items-start justify-center gap-4">
+          <div className="w-[100%] pt-12 px-6 md:pt-24 md:px-12 flex flex-col items-start justify-center gap-4">
             <h1
               className="text-4xl font-medium text-[#ffffff] "
               style={{
@@ -93,13 +93,7 @@ function Home() {
               Get Started
             </button>
           </div>
-          <div className="w-[50%] pt-2">
-            {/* <img
-              src="/images/hero5.jpg"
-              alt="Handcrafted Products"
-              style={{ width: "800px", height: "85vh" }}
-            /> */}
-          </div>
+         
         </div>
         <section className="py-16 text-center bg-white">
           <h2
@@ -114,11 +108,11 @@ function Home() {
           </h2>
           <div className="w-20 h-1 mx-auto bg-[#16b43d] mb-10 rounded"></div>
 
-          <div className=" gap-6 px-4 w-full flex flex-row justify-between ">
+          <div className=" gap-6 px-4 w-full flex md:flex-row flex-col justify-between ">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#16b43d] text-white rounded-lg w-[40%] h-[40vh]  p-6 flex flex-col items-center shadow-md hover:scale-105 transition-transform duration-300"
+                className="bg-[#16b43d] text-white rounded-lg w-full md:w-[40%] min-h-[40vh]  p-6 flex flex-col items-center shadow-md hover:scale-105 transition-transform duration-300"
               >
                 <h1 className="text-2xl">{feature.iconClass}</h1>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
