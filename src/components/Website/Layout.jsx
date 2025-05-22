@@ -143,10 +143,10 @@ function Layout({ children }) {
           </div>
        
         </nav>
-        {icon?<i className="ri-menu-line" onClick={()=>setIcon(!icon)}></i>:<i className="ri-menu-2-line" onClick={()=>setIcon(!icon)}></i>}
+        {icon?<i className="ri-menu-line md:hidden" onClick={()=>setIcon(!icon)}></i>:<i className="ri-menu-2-line md:hidden" onClick={()=>setIcon(!icon)}></i>}
 
       </header>
-       <aside className={`${icon?'w-64 py-6 px-4':'w-0 overflow-hidden'} transform transition duration-300 ease-in-out h-screen bg-white shadow-md fixed top-0 left-0 flex flex-col  z-40`}>
+       <aside className={`${icon?'w-64 py-6 px-4':'w-0 overflow-hidden'} md:hidden transform transition duration-300 ease-in-out h-screen bg-white shadow-md fixed top-0 left-0 flex flex-col  z-40`}>
       
       <ul className="flex flex-col space-y-4">
         {links.map((link) => (
