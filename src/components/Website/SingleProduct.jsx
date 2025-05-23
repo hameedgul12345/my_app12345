@@ -90,7 +90,7 @@ function SingleProduct() {
           </div>
         </div>
       </div>
-      <h1>Related Products</h1>
+      <h1 className="text-center">Related Products</h1>
       <div className="flex flex-row justify-center w-full gap-4 px-8 py-4">
         <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
@@ -99,43 +99,43 @@ function SingleProduct() {
           />
           <h1>Armor Okwahn II</h1>
           <h1>$90.00 $170.00</h1>
-           <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
-                  Buy Now
-                </button>
+          <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
+            Buy Now
+          </button>
         </div>
 
-         <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
+        <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
             src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
           />
           <h1>Armor Okwahn II</h1>
           <h1>$90.00 $170.00</h1>
-           <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
-                  Buy Now
-                </button>
+          <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
+            Buy Now
+          </button>
         </div>
-         <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
+        <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
             src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
           />
           <h1>Armor Okwahn II</h1>
           <h1>$90.00 $170.00</h1>
-           <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
-                  Buy Now
-                </button>
+          <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
+            Buy Now
+          </button>
         </div>
-         <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
+        <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
             src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
           />
           <h1>Armor Okwahn II</h1>
           <h1>$90.00 $170.00</h1>
-           <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
-                  Buy Now
-                </button>
+          <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
+            Buy Now
+          </button>
         </div>
       </div>
     </Layout>
