@@ -62,7 +62,7 @@ function Home() {
     <>
       <Layout>
         <div
-          className="w-full flex flex-row items-start justify-between min-h-[90vh] pb-8"
+          className="w-full flex flex-row items-start justify-between min-h-[90vh] pb-8  mt-12"
           style={{
             backgroundImage: `url('/images/backhero.jpg')`,
             backgroundSize: "cover",
@@ -70,13 +70,15 @@ function Home() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="w-[100%] pt-12 px-6 md:pt-24 md:px-12 flex flex-col items-start justify-center gap-4">
+          <div className="md:w-[50%] w-[100%] pt-12 px-6 md:pt-24 md:px-12 flex flex-col items-start justify-center gap-4">
             <h1
               className="text-4xl font-medium text-[#ffffff] "
               style={{
-                fontFamily: "Rowdies",
-                fontWeight: 400,
-                fontStyle: "normal",
+                fontFamily: "Signika",
+                FontSize:'76.8px',
+               LineHeight:'76.8px',
+               FontWeight:'Bold (700)',
+             LetterSpacing:'normal'
               }}
             >
               Tradition in Every Touch
@@ -90,7 +92,7 @@ function Home() {
               shopping experience.
             </p>
             <button className="bg-[#16b43d] font-semibold px-4 py-2 w-36 text-xl rounded-full text-white">
-              Get Started
+             Shop Now
             </button>
           </div>
          

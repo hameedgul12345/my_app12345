@@ -19,9 +19,9 @@ function Login() {
           <select
             value={role}
             onChange={(e) => setRole(e.target.value)}
-            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md "
           >
-            <option value="customer">Customer</option>
+            <option className='text-[16px]' value="customer">Customer</option>
             <option value="seller">Seller</option>
           </select>
         </div>
@@ -32,7 +32,7 @@ function Login() {
           <input
             type="email"
             placeholder="Enter your email address"
-            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md"
           />
         </div>
 
@@ -43,7 +43,7 @@ function Login() {
             <input
               type="password"
               placeholder="Enter your password"
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md"
             />
             <span className="absolute right-3 top-2.5 text-gray-400 cursor-pointer">👁️</span>
           </div>
@@ -76,8 +76,7 @@ function Login() {
         </p>
       </div>
 
-      {/* Footer */}
-      <p className="mt-6 text-sm text-gray-400">© 2024 Eco-Village. All rights reserved.</p>
+     
     </div>
 
 

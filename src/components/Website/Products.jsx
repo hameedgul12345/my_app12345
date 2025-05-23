@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Layout from './Layout'
+import { useNavigate } from 'react-router-dom';
 
 function Products() {
   const [favorites, setFavorites] = useState(new Set());
   const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 });
-
+const navigate = useNavigate();
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
@@ -160,7 +161,7 @@ const featuredProducts=[
         <div className="w-full md:w-1/2 p-8 space-y-4">
           <h2 className="text-lg font-medium text-gray-700">Furniture Logo</h2>
           <h1 className="text-4xl font-bold text-black">
-            Best Product of <br />
+            Best Product of 
             Furniture Sale
           </h1>
           <p className="text-gray-600">
@@ -267,8 +268,8 @@ const featuredProducts=[
                     </span>
                   )}
                 </div>
-                 <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all">
-                  Buy Now
+                 <button className="mt-auto bg-blue-600 text-white text-sm py-2 px-4 rounded hover:bg-blue-700 transition-all" onClick={() => navigate('/singleproduct')}>
+                Explore Now
                 </button>
               </div>
             </div>

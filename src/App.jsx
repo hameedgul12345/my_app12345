@@ -10,6 +10,7 @@ import Categories from "./components/Website/Categories";
 import Contactus from "./components/Website/Contactus";
 import Login from "./components/Website/Login";
 import Signup from "./components/Website/Signup";
+import SingleProduct from "./components/Website/SingleProduct";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contactus" element={<Contactus/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/singleproduct" element={<SingleProduct/>} />
       </Routes>
     </BrowserRouter>
   );
