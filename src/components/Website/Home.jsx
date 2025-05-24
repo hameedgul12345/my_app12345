@@ -1,6 +1,5 @@
-import React from "react";
 import Layout from "./Layout";
-
+import React, { useEffect, useState } from "react";
 function Home() {
   const features = [
     {
@@ -20,6 +19,32 @@ function Home() {
     },
   ];
 
+  const slides = [
+    {
+      id: 1,
+      title: "Bluetooth Gamepad",
+      subtitle: "IPEGA PG-9023",
+      tag: "WIRELESS BLUETOOTH GAMING",
+      button: "SHOP NOW",
+      image: "/images/mobile1.png",
+    },
+    {
+      id: 2,
+      title: "Samsung Galaxy",
+      subtitle: "S10+ Edge",
+      tag: "NEW DESIGN FEATURES",
+      button: "SHOP NOW",
+      image: "/images/headphone1.png",
+    },
+    {
+      id: 3,
+      title: "Samsung Galaxy",
+      subtitle: "S10+ Edge",
+      tag: "NEW DESIGN FEATURES",
+      button: "SHOP NOW",
+      image: "/images/camera1.png",
+    },
+  ];
   const testimonials = [
     {
       name: "Jerome Bell",
@@ -55,22 +80,28 @@ function Home() {
     </div>
   );
 
+  const [currentSlide, setCurrentSlide] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Change slide every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
 
-  
   return (
     <>
       <Layout>
         <div
-          className="w-full flex flex-row items-start justify-between min-h-[90vh] pb-8  mt-12"
-          style={{
-            backgroundImage: `url('/images/backhero.jpg')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
+          className="w-full flex flex-row items-start justify-between min-h-[90vh] pb-8  "
+          // style={{
+          //   backgroundImage: `url('/images/backhero.jpg')`,
+          //   backgroundSize: "cover",
+          //   backgroundPosition: "center",
+          //   backgroundRepeat: "no-repeat",
+          // }}
         >
-          <div className="md:w-[50%] w-[100%] pt-12 px-6 md:pt-24 md:px-12 flex flex-col items-start justify-center gap-4">
+          {/* <div className="md:w-[50%] w-[100%] pt-12 px-6 md:pt-24 md:px-12 flex flex-col items-start justify-center gap-4">
             <h1
               className="text-4xl font-medium text-[#ffffff] "
               style={{
@@ -95,7 +126,36 @@ function Home() {
              Shop Now
             </button>
           </div>
-         
+          */}
+          <div className="relative w-full h-screen overflow-hidden">
+            {slides.map((slide, index) => (
+              <div
+                key={slide.id}
+                className={`absolute inset-0 flex items-center justify-between px-10 md:px-20 bg-white transition-opacity duration-1000 ${
+                  index === currentSlide ? "opacity-100 z-20" : "opacity-0 z-10"
+                }`}
+              >
+                <div className="max-w-lg text-left">
+                  <p className="text-sm text-gray-500">{slide.tag}</p>
+                  <h1 className="text-4xl font-bold text-black mt-2">
+                    {slide.title}
+                    <br />
+                    <span className="text-black font-extrabold">
+                      {slide.subtitle}
+                    </span>
+                  </h1>
+                  <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded">
+                    {slide.button}
+                  </button>
+                </div>
+                <img
+                  src={slide.image}
+                  alt={slide.subtitle}
+                  className="h-80 object-contain hidden md:block"
+                />
+              </div>
+            ))}
+          </div>
         </div>
         <section className="py-16 text-center bg-white">
           <h2

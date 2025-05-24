@@ -1,112 +1,111 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-function Signup() {
-   const [role, setRole] = useState('customer');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-
-  const handleSignUp = () => {
-    if (password !== confirmPassword) {
-      alert('Passwords do not match!');
-      return;
-    }
-
-    // Handle sign-up logic here (API call or Firebase etc.)
-    alert(`Signing up as ${role}\nName: ${name}\nEmail: ${email}`);
-  };
+function Signin() {
+  const [role, setRole] = useState("customer");
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="bg-white shadow-md rounded-lg px-10 py-8 w-full max-w-2xl">
-        {/* Sign Up Header */}
-        <h2 className="text-center text-2xl font-semibold mb-6">Create a New Account</h2>
+    <div
+      style={{
+        backgroundImage: `url('/images/mountain2.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh",
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: "black",
+          opacity: "0.7",
+          height: "100vh",
+          width: "100%",
+        }}
+        className="flex items-center justify-center gap-8"
+      >
+        {/* <div className="backdrop-blur-lg bg-white/10  border rounded-tr-lg rounded-br-lg border-white/30  p-8 w-96 shadow-lg text-white">
+          
+        </div> */}
+        {/* Left Panel */}
+        <div className=" bg-teal-800 w-[40%] h-[78vh] text-white p-10 flex flex-col justify-between border rounded-tr-[100px] rounded-br-[100px] border-white/30 ">
+          <div className="flex flex-col items-center justify-center h-full">
+            <div>
+              {" "}
+              <h1 className="text-center text-2xl">Your Logo</h1>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold mb-2">Hi, Welcome!!</h2>
+              <p className="mb-4 text-[16px]">
+                Enter your details to Signup or Signup with <br /> social media
+                apps
+              </p>
+              <p className="mb-6 text-[16px]">
+               Already registered? Click below to login.
+              </p>
+              <button className="bg-white text-teal-800 text-xl font-semibold hover:bg-gray-100 px-4 py-2 rounded">
+               Login
+              </button>
+            </div>
+          </div>
+        </div>
 
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Full-width: Sign Up As */}
-          <div className="col-span-1 md:col-span-2">
-            <label className="block text-sm font-medium mb-1">Sign Up As</label>
+        <div className="backdrop-blur-lg bg-white/10 border border-white/30 rounded-lg p-8 w-96 shadow-lg text-white">
+          <h1 className="text-3xl font-bold mb-6 text-center">Signup</h1>
+          <div className="mb-4">
             <select
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md border-gray-300"
+              className="w-full p-3 rounded bg-white/20 text-white focus:outline-none"
             >
-              <option value="customer">Customer</option>
-              <option value="seller">Seller</option>
+              <option className="text-black" value="customer">
+                Customer
+              </option>
+              <option className="text-black" value="seller">
+                Seller
+              </option>
             </select>
           </div>
 
-          {/* Half-width: Full Name */}
-          <div>
-            <label className="block text-sm font-medium mb-1">Full Name</label>
+          <div className="grid grid-cols-1 gap-4 mb-4">
             <input
               type="text"
               placeholder="Enter your full name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md border-gray-300"
+              className="w-full p-3 rounded bg-white/20 placeholder-white text-white focus:outline-none"
             />
-          </div>
-
-          {/* Half-width: Email */}
-          <div>
-            <label className="block text-sm font-medium mb-1">Email Address</label>
             <input
               type="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md border-gray-300"
+              className="w-full p-3 rounded bg-white/20 placeholder-white text-white focus:outline-none"
             />
           </div>
 
-          {/* Half-width: Password */}
-          <div>
-            <label className="block text-sm font-medium mb-1">Password</label>
+          <div className="grid grid-cols-2 gap-4 mb-4">
             <input
               type="password"
               placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md border-gray-300"
+              className="w-full p-3 rounded bg-white/20 placeholder-white text-white focus:outline-none"
             />
-          </div>
-
-          {/* Half-width: Confirm Password */}
-          <div>
-            <label className="block text-sm font-medium mb-1">Confirm Password</label>
             <input
               type="password"
               placeholder="Confirm your password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md border-gray-300"
+              className="w-full p-3 rounded bg-white/20 placeholder-white text-white focus:outline-none"
             />
           </div>
 
-          {/* Full-width: Button */}
-          <div className="col-span-1 md:col-span-2">
-            <button
-              type="button"
-              onClick={handleSignUp}
-              className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 rounded-md mt-2"
-            >
-              Sign Up
-            </button>
+          <button className="w-full py-3 bg-white text-black font-semibold rounded hover:bg-gray-200 transition">
+            Signup
+          </button>
+          <div className="mt-6 text-center text-sm text-white-500">
+            Or Register with{" "}
           </div>
 
-          {/* Full-width: Sign In Link */}
-          <div className="col-span-1 md:col-span-2 text-center text-sm mt-2">
-            Already have an account?
-            <a href="#" className="text-green-500 font-medium ml-1 hover:underline">
-              Sign In
-            </a>
+          <div className="flex justify-center mt-4 space-x-4">
+            <i className="ri-google-fill text-2xl text-white"></i>
+            <i className="ri-facebook-fill  text-2xl text-white"></i>
+
+            <i className="ri-tiktok-line  text-2xl text-white"></i>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
 }
 
-export default Signup
-
+export default Signin;

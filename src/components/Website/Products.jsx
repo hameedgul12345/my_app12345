@@ -241,12 +241,7 @@ const featuredProducts=[
                 </div>
 
                 <div className="absolute bottom-3 left-3">
-                  <div className="flex items-center bg-red-500 text-white px-2 py-1 rounded-md text-xs">
-                    <i className="ri-time-line mr-1" />
-                    <span>
-                      {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
-                    </span>
-                  </div>
+                  
                 </div>
               </div>
 
@@ -342,12 +337,7 @@ const featuredProducts=[
                 </div>
 
                 <div className="absolute bottom-3 left-3">
-                  <div className="flex items-center bg-red-500 text-white px-2 py-1 rounded-md text-xs">
-                    <i className="ri-time-line mr-1" />
-                    <span>
-                      {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
-                    </span>
-                  </div>
+                  
                 </div>
               </div>
 
