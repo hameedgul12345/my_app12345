@@ -19,18 +19,18 @@ function Layout({ children }) {
   };
 const links = [
   {
-    link: "/dashboard",
+    link: "/sellerdashboard",
     title: "Dashboard",
     icon: <i className="ri-dashboard-fill"></i>,
   },
   {
-    link: "/products",
+    link: "/sellerproducts",
     title: "Products",
     icon: <i className="ri-slideshow-fill"></i>,
   },
   {
-    link: "/category",
-    title: "Category",
+    link: "/addproduct",
+    title: "Add Product",
     icon: <i className="ri-archive-fill"></i>,
   },
   {
@@ -43,7 +43,11 @@ const links = [
     title: "settings",
     icon: <i className="ri-slideshow-fill"></i>,
   },
- 
+ {
+    link: "/",
+    title: "Go to website",
+    icon: <i className="ri-home-fill"></i>,
+  },
 ];
 
   return (

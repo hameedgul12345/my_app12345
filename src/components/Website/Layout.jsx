@@ -117,23 +117,23 @@ function Layout({ children }) {
                   : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
               }`}
             >
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3" >
                 {/* My Profile */}
-                <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
-                  <i className="ri-file-user-fill text-green-500"></i>
-                  <h1 className="text-sm font-medium">My Profile</h1>
+                <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition" >
+                  <i className="ri-file-user-fill text-green-500"  ></i>
+                  <h1 className="text-sm font-medium" onClick={()=>navigate("/profile")}>My Profile</h1>
                 </div>
 
                 {/* My Cart */}
                 <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
                   <i className="ri-luggage-cart-fill text-green-500"></i>
-                  <h1 className="text-sm font-medium">My Cart</h1>
+                  <h1 className="text-sm font-medium" onClick={()=>navigate("/mycart")}>My Cart</h1>
                 </div>
 
                 {/* Go to Dashboard */}
                 <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md cursor-pointer transition">
                   <i className="ri-dashboard-3-fill text-green-500"></i>
-                  <h1 className="text-sm font-medium">Dashboard</h1>
+                  <h1 className="text-sm font-medium" onClick={()=>navigate("/sellerdashboard")}>Dashboard</h1>
                 </div>
 
                 {/* Logout */}
