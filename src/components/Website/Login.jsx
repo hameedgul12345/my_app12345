@@ -139,7 +139,7 @@
 import React, { useState } from "react";
 
 function Login() {
-  const [role, setRole] = useState('customer');
+  const [role, setRole] = useState("customer");
   return (
     <div
       style={{
@@ -164,31 +164,43 @@ function Login() {
         {/* Left Panel */}
         <div className=" bg-teal-800 w-[40%] h-[78vh] text-white p-10 flex flex-col justify-between border rounded-tr-[100px] rounded-br-[100px] border-white/30 ">
           <div className="flex flex-col items-center justify-center h-full">
-           <div> <h1 className="text-center text-2xl">Your Logo</h1></div>
+            <div>
+              {" "}
+              <h1 className="text-center text-2xl">Your Logo</h1>
+            </div>
             <div>
               <h2 className="text-2xl font-bold mb-2">Hi, Welcome!!</h2>
-            <p className="mb-4 text-[16px]">
-              Enter your details to login or login with <br /> social media apps
-            </p>
-            <p className="mb-6 text-[16px]">Not registered? Click below to register.</p>
-            <button className="bg-white text-teal-800 text-xl font-semibold hover:bg-gray-100 px-4 py-2 rounded">
-              Sign Up
-            </button>
+              <p className="mb-4 text-[16px]">
+                Enter your details to login or login with <br /> social media
+                apps
+              </p>
+              <p className="mb-6 text-[16px]">
+                Not registered? Click below to register.
+              </p>
+              <button className="bg-white text-teal-800 text-xl font-semibold hover:bg-gray-100 px-4 py-2 rounded">
+                Sign Up
+              </button>
             </div>
           </div>
         </div>
 
         <div className="backdrop-blur-lg bg-white/10 border border-white/30 rounded-lg p-8 w-96 shadow-lg text-white">
           <h1 className="text-3xl font-bold mb-6 text-center">Login</h1>
-          <label className="block text-sm font-medium mb-1 text-white">Login As</label>
-  <select
-    value={role}
-    onChange={(e) => setRole(e.target.value)}
-    className="w-full mb-4 p-3 rounded bg-white/20 placeholder-white text-white focus:outline-none"
-  >
-    <option className="text-black" value="customer">Customer</option>
-    <option className="text-black" value="seller">Seller</option>
-  </select>
+          <label className="block text-sm font-medium mb-1 text-white">
+            Login As
+          </label>
+          <select
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+            className="w-full mb-4 p-3 rounded bg-white/20 placeholder-white text-white focus:outline-none"
+          >
+            <option className="text-black" value="customer">
+              Customer
+            </option>
+            <option className="text-black" value="seller">
+              Seller
+            </option>
+          </select>
           <input
             type="email"
             placeholder="Enter your email"

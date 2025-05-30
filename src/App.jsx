@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'animate.css';
 
 import Home from "./components/Website/Home";
 
