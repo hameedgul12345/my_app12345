@@ -247,6 +247,27 @@ function Home() {
       rating: 4,
     },
   ];
+
+  useGSAP(() => {
+  gsap.to("#img2", {
+    y: -20,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut",
+  });
+});
+
+  useGSAP(() => {
+  gsap.from("#img1", {
+    y: -20,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut",
+  });
+});
+
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -352,7 +373,42 @@ function Home() {
             </div>
           ) : null
         )}
+        <div className="flex flex-col md:flex-row w-full items-start justify-between px-4 md:px-12 py-12 gap-6 bg-white">
+          {/* Left Section */}
+          <div className="md:w-[40%] space-y-4">
+            <h2 className="text-2xl font-bold uppercase">Featured Products</h2>
+            <p className="text-sm text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </p>
+            <button className="bg-red-500 text-white text-sm px-5 py-2 rounded-full hover:bg-red-600 transition">
+              Buy Now
+            </button>
+            <div>
+              <img
+                src="https://img.freepik.com/free-vector/cosmetic-series-with-wild-cornflower-realistic_88138-228.jpg?uid=R114394203&ga=GA1.1.1840668077.1740570776&semt=ais_items_boosted&w=740"
+                alt="Monitor Setup"
+                className="rounded-lg w-full animate__animated animate__pulse animate__infinite animate__slower"
+              />
+            </div>
+          </div>
 
+          {/* Right Section */}
+          <div className="md:w-[60%] flex flex-col md:flex-row items-center gap-4">
+            <img
+              src="https://img.freepik.com/free-photo/3d-rendering-camera-with-photo-film_23-2150985249.jpg?uid=R114394203&ga=GA1.1.1840668077.1740570776&semt=ais_items_boosted&w=740"
+              alt="Camera Lens"
+              id="img2"
+              className="rounded-lg w-full h-[500px] md:w-1/2 object-cover"
+            />
+            <img
+              src="https://img.freepik.com/free-photo/interior-design-house-modern-wooden-table-chair_657883-324.jpg?uid=R114394203&ga=GA1.1.1840668077.1740570776&semt=ais_items_boosted&w=740"
+              id="img1"
+              alt="Phone on Desk"
+              className="rounded-lg  h-[500px] w-full md:w-1/2 object-cover"
+            />
+          </div>
+        </div>
         <section className="py-16 text-center bg-white">
           <h2
             className="text-4xl font-bold text-[#16b43d] mb-2"
@@ -526,44 +582,16 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className=" bg-gray-100 min-h-screen p-6">
+        {/* <div className=" bg-gray-100 min-h-screen p-6">
           {mostSellingProducts.map((product, index) => (
-            <div
-              key={index}
-              className="relative bg-white flex flex-row rounded-xl shadow-md m-4 w-72"
-            >
-              <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
-                On Sale
-              </span>
-              <img
-                src={product.image}
-                alt={product.title}
-                className="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div className="p-4">
-                <div className="text-yellow-500 text-sm mb-1">
-                  {"★".repeat(product.rating)}
-                  {"☆".repeat(5 - product.rating)}
-                </div>
-                <h2 className="font-semibold text-sm uppercase">
-                  {product.title}
-                </h2>
-                <div className="text-sm font-bold mt-2">
-                  ${product.price.toFixed(2)} USD
-                </div>
-                <div className="text-xs text-gray-400 line-through">
-                  ${product.oldPrice.toFixed(2)} USD
-                </div>
-                <div className="text-xs text-gray-500 mt-1">
-                  SKU: {product.sku}
-                </div>
-                <button className="mt-4 px-4 py-1 text-sm border border-red-400 text-red-500 rounded-full hover:bg-red-50 transition">
-                  Add to Cart
-                </button>
+            <div className="flex flex-row " >
+              <div className="flex flex-row " key={index}>
+<img src={product.image} className="w-[100px]" alt="" />
+
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
         <div
           className="bg-cover bg-center py-16 px-4 text-center"
           style={{ backgroundImage: `url('/images/backreview1.jpg')` }}

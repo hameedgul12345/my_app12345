@@ -226,7 +226,7 @@ tl.from("#link", {
       </aside>
       <div className="pt-16">{children}</div>
 
-      <footer className="bg-white border-t border-gray-200 text-gray-800">
+      {/* <footer className="bg-white border-t border-gray-200 text-gray-800">
         <div className="hidden w-full mx-auto px-4 py-12 md:flex flex-row gap-8">
           <div className="w-[25%]">
             <h2 className="text-xl font-bold text-red-600 flex items-center">
@@ -353,86 +353,161 @@ tl.from("#link", {
             Distributed By <span className="text-red-500">ThemeWagon</span>
           </p>
         </div>
-      </footer>
+      </footer> */}
+      <footer className="bg-black text-white py-12 px-6 md:px-16">
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+    {/* Logo and Description */}
+    <div>
+      <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
+        <span className="text-yellow-500 text-4xl">🍂</span> Qohwa
+      </h2>
+      <p className="text-sm leading-relaxed">
+        I am text block. Click edit button to change this text. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+        nec ullamcorper mattis, pulvinar dapibus leo.
+      </p>
+      <div className="flex gap-4 mt-4 text-lg">
+        <i className="ri-facebook-fill hover:text-yellow-500 cursor-pointer"></i>
+        <i className="ri-youtube-fill hover:text-yellow-500 cursor-pointer"></i>
+        <i className="ri-instagram-line hover:text-yellow-500 cursor-pointer"></i>
+        <i className="ri-linkedin-fill hover:text-yellow-500 cursor-pointer"></i>
+        <i className="ri-twitter-fill hover:text-yellow-500 cursor-pointer"></i>
+      </div>
+    </div>
+
+    {/* Product */}
+    <div>
+      <h3 className="font-bold text-lg mb-4">Product</h3>
+      <ul className="space-y-2 text-sm">
+        <li>➤ Discount</li>
+        <li>➤ New Arrival</li>
+        <li>➤ Best Selling</li>
+        <li>➤ Featured</li>
+        <li>➤ 50% Off</li>
+      </ul>
+    </div>
+
+    {/* Help Center */}
+    <div>
+      <h3 className="font-bold text-lg mb-4">Help Center</h3>
+      <ul className="space-y-2 text-sm">
+        <li>➤ Returns</li>
+        <li>➤ Our Offices</li>
+        <li>➤ Shipping</li>
+        <li>➤ Payments</li>
+        <li>➤ Reset Password</li>
+      </ul>
+    </div>
+
+    {/* Contact Us */}
+    <div>
+      <h3 className="font-bold text-lg mb-4">Contact us</h3>
+      <ul className="space-y-2 text-sm">
+        <li>
+          <i className="ri-phone-line mr-2"></i> +61 089 988 8722
+        </li>
+        <li>
+          <i className="ri-mail-line mr-2"></i> info@yourmail.com
+        </li>
+        <li>
+          <i className="ri-map-pin-line mr-2"></i> 890 Street Village,
+          Atalanta, Italy
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  {/* Bottom Bar */}
+  <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+    <p className="text-sm">Copyright © All Right Reserved</p>
+    <div className="flex gap-3 mt-4 md:mt-0">
+      <img src="/images/pay.png" alt="Pay" className="h-6" />
+      <img src="/images/paypal.png" alt="PayPal" className="h-6" />
+      <img src="/images/visa.png" alt="Visa" className="h-6" />
+      <img src="/images/mastercard.png" alt="MasterCard" className="h-6" />
+      <img src="/images/stripe.png" alt="Stripe" className="h-6" />
+    </div>
+  </div>
+</footer>
+
     </>
   );
 }
 
 export default Layout;
 
-//  (
 //     <footer className="bg-black text-white py-12 px-6 md:px-16">
-//       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-//         {/* Logo and Description */}
-//         <div>
-//           <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
-//             <span className="text-yellow-500 text-4xl">🍂</span> Qohwa
-//           </h2>
-//           <p className="text-sm leading-relaxed">
-//             I am text block. Click edit button to change this text. Lorem ipsum
-//             dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
-//             nec ullamcorper mattis, pulvinar dapibus leo.
-//           </p>
-//           <div className="flex gap-4 mt-4 text-lg">
-//             <i className="ri-facebook-fill hover:text-yellow-500 cursor-pointer"></i>
-//             <i className="ri-youtube-fill hover:text-yellow-500 cursor-pointer"></i>
-//             <i className="ri-instagram-line hover:text-yellow-500 cursor-pointer"></i>
-//             <i className="ri-linkedin-fill hover:text-yellow-500 cursor-pointer"></i>
-//             <i className="ri-twitter-fill hover:text-yellow-500 cursor-pointer"></i>
-//           </div>
-//         </div>
+// //       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+// //         {/* Logo and Description */}
+// //         <div>
+// //           <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
+// //             <span className="text-yellow-500 text-4xl">🍂</span> Qohwa
+// //           </h2>
+// //           <p className="text-sm leading-relaxed">
+// //             I am text block. Click edit button to change this text. Lorem ipsum
+// //             dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+// //             nec ullamcorper mattis, pulvinar dapibus leo.
+// //           </p>
+// //           <div className="flex gap-4 mt-4 text-lg">
+// //             <i className="ri-facebook-fill hover:text-yellow-500 cursor-pointer"></i>
+// //             <i className="ri-youtube-fill hover:text-yellow-500 cursor-pointer"></i>
+// //             <i className="ri-instagram-line hover:text-yellow-500 cursor-pointer"></i>
+// //             <i className="ri-linkedin-fill hover:text-yellow-500 cursor-pointer"></i>
+// //             <i className="ri-twitter-fill hover:text-yellow-500 cursor-pointer"></i>
+// //           </div>
+// //         </div>
 
-//         {/* Product */}
-//         <div>
-//           <h3 className="font-bold text-lg mb-4">Product</h3>
-//           <ul className="space-y-2 text-sm">
-//             <li>➤ Discount</li>
-//             <li>➤ New Arrival</li>
-//             <li>➤ Best Selling</li>
-//             <li>➤ Featured</li>
-//             <li>➤ 50% Off</li>
-//           </ul>
-//         </div>
+// //         {/* Product */}
+// //         <div>
+// //           <h3 className="font-bold text-lg mb-4">Product</h3>
+// //           <ul className="space-y-2 text-sm">
+// //             <li>➤ Discount</li>
+// //             <li>➤ New Arrival</li>
+// //             <li>➤ Best Selling</li>
+// //             <li>➤ Featured</li>
+// //             <li>➤ 50% Off</li>
+// //           </ul>
+// //         </div>
 
-//         {/* Help Center */}
-//         <div>
-//           <h3 className="font-bold text-lg mb-4">Help Center</h3>
-//           <ul className="space-y-2 text-sm">
-//             <li>➤ Returns</li>
-//             <li>➤ Our Offices</li>
-//             <li>➤ Shipping</li>
-//             <li>➤ Payments</li>
-//             <li>➤ Reset Password</li>
-//           </ul>
-//         </div>
+// //         {/* Help Center */}
+// //         <div>
+// //           <h3 className="font-bold text-lg mb-4">Help Center</h3>
+// //           <ul className="space-y-2 text-sm">
+// //             <li>➤ Returns</li>
+// //             <li>➤ Our Offices</li>
+// //             <li>➤ Shipping</li>
+// //             <li>➤ Payments</li>
+// //             <li>➤ Reset Password</li>
+// //           </ul>
+// //         </div>
 
-//         {/* Contact Us */}
-//         <div>
-//           <h3 className="font-bold text-lg mb-4">Contact us</h3>
-//           <ul className="space-y-2 text-sm">
-//             <li>
-//               <i className="ri-phone-line mr-2"></i> +61 089 988 8722
-//             </li>
-//             <li>
-//               <i className="ri-mail-line mr-2"></i> info@yourmail.com
-//             </li>
-//             <li>
-//               <i className="ri-map-pin-line mr-2"></i> 890 Street Village,
-//               Atalanta, Italy
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
+// //         {/* Contact Us */}
+// //         <div>
+// //           <h3 className="font-bold text-lg mb-4">Contact us</h3>
+// //           <ul className="space-y-2 text-sm">
+// //             <li>
+// //               <i className="ri-phone-line mr-2"></i> +61 089 988 8722
+// //             </li>
+// //             <li>
+// //               <i className="ri-mail-line mr-2"></i> info@yourmail.com
+// //             </li>
+// //             <li>
+// //               <i className="ri-map-pin-line mr-2"></i> 890 Street Village,
+// //               Atalanta, Italy
+// //             </li>
+// //           </ul>
+// //         </div>
+// //       </div>
 
-//       {/* Bottom Bar */}
-//       <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
-//         <p className="text-sm">Copyright © All Right Reserved</p>
-//         <div className="flex gap-3 mt-4 md:mt-0">
-//           <img src="/images/pay.png" alt="Pay" className="h-6" />
-//           <img src="/images/paypal.png" alt="PayPal" className="h-6" />
-//           <img src="/images/visa.png" alt="Visa" className="h-6" />
-//           <img src="/images/mastercard.png" alt="MasterCard" className="h-6" />
-//           <img src="/images/stripe.png" alt="Stripe" className="h-6" />
-//         </div>
-//       </div>
-//     </footer>
+// //       {/* Bottom Bar */}
+// //       <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+// //         <p className="text-sm">Copyright © All Right Reserved</p>
+// //         <div className="flex gap-3 mt-4 md:mt-0">
+// //           <img src="/images/pay.png" alt="Pay" className="h-6" />
+// //           <img src="/images/paypal.png" alt="PayPal" className="h-6" />
+// //           <img src="/images/visa.png" alt="Visa" className="h-6" />
+// //           <img src="/images/mastercard.png" alt="MasterCard" className="h-6" />
+// //           <img src="/images/stripe.png" alt="Stripe" className="h-6" />
+// //         </div>
+// //       </div>
+//    </footer>
