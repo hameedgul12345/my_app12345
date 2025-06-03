@@ -75,7 +75,7 @@ tl.from("#link", {
                 id="link"
                   to={link.link}
                   className={`flex items-center space-x-2 ${
-                    location.pathname === link.link ? "text-[#4DD36F]" : ""
+                    location.pathname === link.link ? "text-red-600" : ""
                   }`}
                 >
                   <span

@@ -294,21 +294,21 @@ function Home() {
           item.option ? (
             <div
               key={index}
-              className="flex flex-col  md:pb-0 pb-4  justify-center items-center w-full min-h-[100vh]  md:min-h-[85vh] bg-black relative overflow-hidden px-10"
+              className="flex flex-col  md:pb-0 pb-4  justify-center items-center w-full min-h-[100vh]  md:min-h-[85vh] bg-red-600 relative overflow-hidden px-10"
             >
               <div className="flex flex-col-reverse   md:flex-row justify-around w-full">
                 <div
                   ref={heroleft}
                   className="md:w-[50%] w-[100%] flex flex-col items-start justify-center gap-1 md:gap-4"
                 >
-                  <h1 className="text-green-500 text-3xl md:text-5xl font-bold">
+                  <h1 className="text-white text-3xl md:text-5xl font-bold">
                     {item.h1}
                   </h1>
                   <h1 className="text-white text-2xl md:text-3xl font-bold">
                     {item.h2}
                   </h1>
                   <p className="text-white text-[16px]">{item.p}</p>
-                  <button className="bg-black text-green-500 border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition animate__animated animate__pulse animate__infinite animate__slower">
+                  <button className=" text-white border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition animate__animated animate__pulse animate__infinite animate__slower">
                     Shop Now
                   </button>
                 </div>
@@ -373,15 +373,43 @@ function Home() {
             </div>
           ) : null
         )}
-        <div className="flex flex-col md:flex-row w-full items-start justify-between px-4 md:px-12 py-12 gap-6 bg-white">
+       
+        <section className="py-16 text-center bg-white">
+          <h2
+            className="text-4xl font-bold text-red-600 mb-2"
+            style={{
+              fontFamily: "Rowdies",
+              fontWeight: 400,
+              fontStyle: "normal",
+            }}
+          >
+            Why Shop With Us
+          </h2>
+          <div className="w-70 mt-4 h-1 mx-auto bg-red-600 mb-10 rounded"></div>
+
+          <div className=" gap-6 px-4 w-full flex md:flex-row flex-col justify-between  overflow-hidden">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-red-600 text-white rounded-lg w-full md:w-[40%] min-h-[40vh]  p-6 flex flex-col items-center shadow-md hover:scale-105 transition-transform duration-300"
+              >
+                <h1 className="text-2xl">{feature.iconClass}</h1>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-[14px] text-center">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+         <div className="flex flex-col md:flex-row w-full items-start justify-between px-4 md:px-12 py-12 gap-6 bg-white">
           {/* Left Section */}
           <div className="md:w-[40%] space-y-4">
             <h2 className="text-2xl font-bold uppercase">Featured Products</h2>
             <p className="text-sm text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
+              Explore our exclusive collection of featured products that combine
+              style and functionality. Each item is carefully selected to enhance
+              your lifestyle, offering quality and value that you can trust.
             </p>
-            <button className="bg-red-500 text-white text-sm px-5 py-2 rounded-full hover:bg-red-600 transition">
+            <button  onClick={()=>navigate('/products')} className="bg-red-500 text-white text-sm px-5 py-2 rounded-full hover:bg-red-600 transition">
               Buy Now
             </button>
             <div>
@@ -409,32 +437,6 @@ function Home() {
             />
           </div>
         </div>
-        <section className="py-16 text-center bg-white">
-          <h2
-            className="text-4xl font-bold text-[#16b43d] mb-2"
-            style={{
-              fontFamily: "Rowdies",
-              fontWeight: 400,
-              fontStyle: "normal",
-            }}
-          >
-            Why Shop With Us
-          </h2>
-          <div className="w-20 h-1 mx-auto bg-[#16b43d] mb-10 rounded"></div>
-
-          <div className=" gap-6 px-4 w-full flex md:flex-row flex-col justify-between  overflow-hidden">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-[#16b43d] text-white rounded-lg w-full md:w-[40%] min-h-[40vh]  p-6 flex flex-col items-center shadow-md hover:scale-105 transition-transform duration-300"
-              >
-                <h1 className="text-2xl">{feature.iconClass}</h1>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-[14px] text-center">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
         <section className=" py-12 px-4">
           <div className="text-center mb-10 flex flex-col items-center">
             <span className="bg-green-500 text-white text-xs px-3 py-1 rounded-full uppercase font-semibold">
