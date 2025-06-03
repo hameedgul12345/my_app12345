@@ -52,7 +52,7 @@ function Home() {
       sale: true,
     },
   ];
-   const thumbnails = [
+  const thumbnails = [
     "/images/watch1.png",
     "/images/watch2.png",
     "/images/watch3.png",
@@ -63,11 +63,11 @@ function Home() {
   const productsCamera = [
     {
       title: "Imported Cameras",
-      image: "/images/backcamera1.jpg", // Replace with your actual path
+      image: "/images/backcamera1.webp", // Replace with your actual path
     },
     {
       title: "Brand New Watches",
-      image: "/images/backcamera2.jpg", // Replace with your actual path
+      image: "/images/backcamera2.webp", // Replace with your actual path
     },
   ];
 
@@ -84,7 +84,7 @@ function Home() {
       h1: "Stylish watch",
       h2: "Accessorize Your Style",
       p: "Explore our curated selection of watches that blend fashion and functionality. From classic designs to modern smartwatches, find the perfect timepiece to complement your look.",
-      image: "/images/watch2.png",
+      image: "/images/watch4.webp",
     },
     {
       option: thirdButton,
@@ -174,40 +174,40 @@ function Home() {
   );
 
   const [currentSlide, setCurrentSlide] = useState(0);
-const sellingProducts = [
-  {
-    title: "CLASSIC WATCH",
-    price: 140.0,
-    oldPrice: 160.0,
-    rating: 5,
-    sku: "NX85A75K",
-    image: "/images/watch.png",
-  },
-  {
-    title: "SMART PHONE",
-    price: 110.0,
-    oldPrice: 200.0,
-    rating: 4,
-    sku: "NXM5811K",
-    image: "/images/phone.png",
-  },
-  {
-    title: "NX-SPEAKER",
-    price: 140.0,
-    oldPrice: null,
-    rating: 3,
-    sku: "NX85001S",
-    image: "/images/speaker.png",
-  },
-  {
-    title: "BLACK LAPTOP",
-    price: 175.0,
-    oldPrice: 200.0,
-    rating: 4,
-    sku: "NXL721S",
-    image: "/images/laptop.png",
-  },
-];
+  const sellingProducts = [
+    {
+      title: "CLASSIC WATCH",
+      price: 140.0,
+      oldPrice: 160.0,
+      rating: 5,
+      sku: "NX85A75K",
+      image: "/images/watch.png",
+    },
+    {
+      title: "SMART PHONE",
+      price: 110.0,
+      oldPrice: 200.0,
+      rating: 4,
+      sku: "NXM5811K",
+      image: "/images/phone.png",
+    },
+    {
+      title: "NX-SPEAKER",
+      price: 140.0,
+      oldPrice: null,
+      rating: 3,
+      sku: "NX85001S",
+      image: "/images/speaker.png",
+    },
+    {
+      title: "BLACK LAPTOP",
+      price: 175.0,
+      oldPrice: 200.0,
+      rating: 4,
+      sku: "NXL721S",
+      image: "/images/laptop.png",
+    },
+  ];
   useEffect(() => {
     gsap.fromTo(
       heroleft.current,
@@ -227,7 +227,26 @@ const sellingProducts = [
     }, 5000); // Change slide every 5 seconds
     return () => clearInterval(interval);
   }, []);
-
+  const mostSellingProducts = [
+    {
+      image:
+        "https://img.freepik.com/free-vector/classic-watches-interface_250435-186.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
+      title: "Classic Watch",
+      price: 140,
+      oldPrice: 160,
+      sku: "NX95A7SK",
+      rating: 5,
+    },
+    {
+      image:
+        "https://img.freepik.com/free-vector/classic-watches-interface_250435-186.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
+      title: "Smart Phone",
+      price: 110,
+      oldPrice: 180,
+      sku: "NXM981KS",
+      rating: 4,
+    },
+  ];
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -254,17 +273,19 @@ const sellingProducts = [
           item.option ? (
             <div
               key={index}
-              className="flex flex-col  md:pb-0 pb-4  justify-center items-center w-full min-h-[85vh] bg-black relative overflow-hidden px-10"
+              className="flex flex-col  md:pb-0 pb-4  justify-center items-center w-full min-h-[100vh]  md:min-h-[85vh] bg-black relative overflow-hidden px-10"
             >
               <div className="flex flex-col-reverse   md:flex-row justify-around w-full">
                 <div
                   ref={heroleft}
-                  className="md:w-[50%] w-[100%] flex flex-col items-start justify-center gap-4"
+                  className="md:w-[50%] w-[100%] flex flex-col items-start justify-center gap-1 md:gap-4"
                 >
                   <h1 className="text-green-500 text-3xl md:text-5xl font-bold">
                     {item.h1}
                   </h1>
-                  <h1 className="text-white text-2xl md:text-3xl font-bold">{item.h2}</h1>
+                  <h1 className="text-white text-2xl md:text-3xl font-bold">
+                    {item.h2}
+                  </h1>
                   <p className="text-white text-[16px]">{item.p}</p>
                   <button className="bg-black text-green-500 border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition animate__animated animate__pulse animate__infinite animate__slower">
                     Shop Now
@@ -281,7 +302,7 @@ const sellingProducts = [
                   />
                 </div>
               </div>
-              <div className="flex justify-start md:justify-center md:mt-0 mt-4  gap-4 items-center w-full h-6">
+              <div className="absolute md:top-[470px] top-[480px] md:left-8 left-12 flex justify-start md:justify-center md:mt-0 mt-4 pb-2   gap-4 items-center w-full h-6">
                 <div
                   className={` ${
                     firstButton
@@ -436,60 +457,113 @@ const sellingProducts = [
             </div>
           ))}
         </div>
-         <div className="flex flex-wrap justify-center gap-6 p-8 bg-white text-white">
-      {/* Left Card */}
-      <div className="bg-black rounded-xl w-64 p-6 flex flex-col items-center text-center">
-        <span className="bg-green-600 text-xs px-3 py-1 rounded-full mb-2">Monthly Deals</span>
-        <h2 className="text-lg font-bold text-white mb-4">LATEST HEADPHONES</h2>
-        <img
-          src="/images/headphone1.png" // Replace with your white headphone image path
-          alt="Latest Headphones"
-          className="w-40 h-auto"
-        />
-      </div>
-
-      {/* Right Card */}
-      <div className="bg-black rounded-xl flex flex-col lg:flex-row p-6 w-full lg:w-[800px] gap-4">
-        {/* Side Thumbnails */}
-        <div className="flex lg:flex-col gap-3">
-          {["camera1.png", "sofa2.png", "headphone1.png", "watch1.png"].map((img, index) => (
+        <div className="flex flex-wrap justify-center gap-6 p-8 bg-white text-white">
+          {/* Left Card */}
+          <div className="bg-black rounded-xl w-64 p-6 flex flex-col items-center text-center">
+            <span className="bg-green-600 text-xs px-3 py-1 rounded-full mb-2">
+              Monthly Deals
+            </span>
+            <h2 className="text-lg font-bold text-white mb-4">
+              LATEST HEADPHONES
+            </h2>
             <img
-              key={index}
-              src={`/images/${img}`} // Replace with actual thumbnail paths
-              alt="Thumbnail"
-              className={`w-12 h-12 border-2 rounded-lg p-1 ${index === 1 ? "border-green-600" : "border-white"}`}
+              src="/images/headphone1.png" // Replace with your white headphone image path
+              alt="Latest Headphones"
+              className="w-40 h-auto"
             />
+          </div>
+
+          {/* Right Card */}
+          <div className="bg-black rounded-xl flex flex-col lg:flex-row p-6 w-full lg:w-[800px] gap-4">
+            {/* Side Thumbnails */}
+            <div className="flex lg:flex-col gap-3">
+              {["camera1.png", "sofa2.png", "headphone1.png", "watch1.png"].map(
+                (img, index) => (
+                  <img
+                    key={index}
+                    src={`/images/${img}`} // Replace with actual thumbnail paths
+                    alt="Thumbnail"
+                    className={`w-12 h-12 border-2 rounded-lg p-1 ${
+                      index === 1 ? "border-green-600" : "border-white"
+                    }`}
+                  />
+                )
+              )}
+            </div>
+
+            {/* Main Image */}
+            <div className="flex-1">
+              <img
+                src="/images/headphone1.png" // Replace with main image path
+                alt="Stereo Headphones"
+                className="rounded-xl w-full object-cover"
+              />
+            </div>
+
+            {/* Product Details */}
+            <div className="flex-1 text-left">
+              <h3 className="text-xl font-bold">Stereo Headphone</h3>
+              <div className="flex items-center text-yellow-400 text-sm mt-1 mb-2">
+                ★★★★★
+              </div>
+              <p className="text-green-500 font-semibold text-lg mb-2">
+                $ 100.00 USD
+              </p>
+              <p className="text-sm text-gray-300 mb-4">
+                Effect font move vertical share. Connection frame edit export
+                arrow. Undo device move opacity image layer. List star blur
+                strikethrough arrow.
+              </p>
+              <p className="text-sm text-white">
+                SKU: <span className="text-gray-400">NXHPZ71</span>
+              </p>
+              <p className="text-sm mb-4">
+                STOCK: <span className="text-green-500">AVAILABLE</span>
+              </p>
+              <button className="mt-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className=" bg-gray-100 min-h-screen p-6">
+          {mostSellingProducts.map((product, index) => (
+            <div
+              key={index}
+              className="relative bg-white flex flex-row rounded-xl shadow-md m-4 w-72"
+            >
+              <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                On Sale
+              </span>
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full h-48 object-cover rounded-t-xl"
+              />
+              <div className="p-4">
+                <div className="text-yellow-500 text-sm mb-1">
+                  {"★".repeat(product.rating)}
+                  {"☆".repeat(5 - product.rating)}
+                </div>
+                <h2 className="font-semibold text-sm uppercase">
+                  {product.title}
+                </h2>
+                <div className="text-sm font-bold mt-2">
+                  ${product.price.toFixed(2)} USD
+                </div>
+                <div className="text-xs text-gray-400 line-through">
+                  ${product.oldPrice.toFixed(2)} USD
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  SKU: {product.sku}
+                </div>
+                <button className="mt-4 px-4 py-1 text-sm border border-red-400 text-red-500 rounded-full hover:bg-red-50 transition">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
           ))}
         </div>
-
-        {/* Main Image */}
-        <div className="flex-1">
-          <img
-            src="/images/headphone1.png" // Replace with main image path
-            alt="Stereo Headphones"
-            className="rounded-xl w-full object-cover"
-          />
-        </div>
-
-        {/* Product Details */}
-        <div className="flex-1 text-left">
-          <h3 className="text-xl font-bold">Stereo Headphone</h3>
-          <div className="flex items-center text-yellow-400 text-sm mt-1 mb-2">
-            ★★★★★
-          </div>
-          <p className="text-green-500 font-semibold text-lg mb-2">$ 100.00 USD</p>
-          <p className="text-sm text-gray-300 mb-4">
-            Effect font move vertical share. Connection frame edit export arrow. Undo device move opacity image layer. List star blur strikethrough arrow.
-          </p>
-          <p className="text-sm text-white">SKU: <span className="text-gray-400">NXHPZ71</span></p>
-          <p className="text-sm mb-4">STOCK: <span className="text-green-500">AVAILABLE</span></p>
-          <button className="mt-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-    
         <div
           className="bg-cover bg-center py-16 px-4 text-center"
           style={{ backgroundImage: `url('/images/backreview1.jpg')` }}
