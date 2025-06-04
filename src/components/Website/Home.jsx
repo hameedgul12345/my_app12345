@@ -323,7 +323,7 @@ function Home() {
                   />
                 </div>
               </div>
-              <div className="absolute md:top-[470px] top-[480px] md:left-8 left-12 flex justify-start md:justify-center md:mt-0 mt-4 pb-2   gap-4 items-center w-full h-6">
+              <div className="absolute md:top-[470px] top-[500px] md:left-8 left-12 flex justify-start md:justify-center md:mt-0 mt-4 pb-2   gap-4 items-center w-full h-6">
                 <div
                   className={` ${
                     firstButton
