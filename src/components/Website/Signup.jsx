@@ -208,8 +208,8 @@ function Signup() {
                   />
                 </div>
 
-                <button className="w-[30%] mt-3 py-2 bg-blue-600 text-white font-semibold rounded-full transition">
-                  Signup
+                <button className="w-[30%] mt-3 py-2 bg-[#ff5733] text-white font-semibold rounded-sm transition">
+                  Sign Up
                 </button>
 
                 <div className="mt-2 text-center  text-sm -500">

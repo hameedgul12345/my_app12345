@@ -29,12 +29,12 @@ function Layout({ children }) {
     },
     {
       link: "/login",
-      title: "Login",
+      title: "Log In",
       icon: <i className="ri-login-circle-fill"></i>,
     },
     {
       link: "/signup",
-      title: "Signup",
+      title: "Sign Up",
       icon: <i className="ri-login-circle-fill"></i>,
     },
   ];
@@ -46,14 +46,14 @@ function Layout({ children }) {
       delay: 0.5,
       duration: 1,
     });
-tl.from("#link", {
+    tl.from("#link", {
       y: -30,
       opacity: 0,
       stagger: 0.2,
       duration: 0.5,
     });
   });
-  
+
   return (
     <>
       <header className="bg-white shadow-md p-4 flex justify-between  items-center fixed top-0 left-0 right-0 z-50">
@@ -72,7 +72,7 @@ tl.from("#link", {
             {links.map((link) => (
               <li key={link.link}>
                 <Link
-                id="link"
+                  id="link"
                   to={link.link}
                   className={`flex items-center space-x-2 ${
                     location.pathname === link.link ? "text-red-600" : ""
@@ -354,82 +354,73 @@ tl.from("#link", {
           </p>
         </div>
       </footer> */}
-      <footer className="bg-black text-white py-12 px-6 md:px-16">
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-    {/* Logo and Description */}
-    <div>
-      <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
-        <span className="text-yellow-500 text-4xl">🍂</span> Qohwa
-      </h2>
-      <p className="text-sm leading-relaxed">
-        I am text block. Click edit button to change this text. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
-        nec ullamcorper mattis, pulvinar dapibus leo.
-      </p>
-      <div className="flex gap-4 mt-4 text-lg">
-        <i className="ri-facebook-fill hover:text-yellow-500 cursor-pointer"></i>
-        <i className="ri-youtube-fill hover:text-yellow-500 cursor-pointer"></i>
-        <i className="ri-instagram-line hover:text-yellow-500 cursor-pointer"></i>
-        <i className="ri-linkedin-fill hover:text-yellow-500 cursor-pointer"></i>
-        <i className="ri-twitter-fill hover:text-yellow-500 cursor-pointer"></i>
-      </div>
-    </div>
-
-    {/* Product */}
-    <div>
-      <h3 className="font-bold text-lg mb-4">Product</h3>
-      <ul className="space-y-2 text-sm">
-        <li>➤ Discount</li>
-        <li>➤ New Arrival</li>
-        <li>➤ Best Selling</li>
-        <li>➤ Featured</li>
-        <li>➤ 50% Off</li>
-      </ul>
-    </div>
-
-    {/* Help Center */}
-    <div>
-      <h3 className="font-bold text-lg mb-4">Help Center</h3>
-      <ul className="space-y-2 text-sm">
-        <li>➤ Returns</li>
-        <li>➤ Our Offices</li>
-        <li>➤ Shipping</li>
-        <li>➤ Payments</li>
-        <li>➤ Reset Password</li>
-      </ul>
-    </div>
-
-    {/* Contact Us */}
-    <div>
-      <h3 className="font-bold text-lg mb-4">Contact us</h3>
-      <ul className="space-y-2 text-sm">
-        <li>
-          <i className="ri-phone-line mr-2"></i> +61 089 988 8722
-        </li>
-        <li>
-          <i className="ri-mail-line mr-2"></i> info@yourmail.com
-        </li>
-        <li>
-          <i className="ri-map-pin-line mr-2"></i> 890 Street Village,
-          Atalanta, Italy
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  {/* Bottom Bar */}
-  <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
-    <p className="text-sm">Copyright © All Right Reserved</p>
-    <div className="flex gap-3 mt-4 md:mt-0">
-      <img src="/images/pay.png" alt="Pay" className="h-6" />
-      <img src="/images/paypal.png" alt="PayPal" className="h-6" />
-      <img src="/images/visa.png" alt="Visa" className="h-6" />
-      <img src="/images/mastercard.png" alt="MasterCard" className="h-6" />
-      <img src="/images/stripe.png" alt="Stripe" className="h-6" />
-    </div>
-  </div>
-</footer>
-
+      {/* Footer */}
+      <footer className="bg-[#2a1e1e] text-white py-12 px-6">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">GadgetZ</h3>
+              <p className="text-gray-300 mb-4">Premium watches and accessories for the modern individual.</p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">
+                  <i className="fab fa-pinterest"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">Home</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">Shop</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">About Us</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Customer Service</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">FAQ</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">Shipping & Returns</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">Warranty</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-[#ff5733] transition-colors duration-300 cursor-pointer">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Newsletter</h3>
+              <p className="text-gray-300 mb-4">Subscribe to receive updates on new arrivals and special offers.</p>
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="px-4 py-2 w-full border-none focus:outline-none text-gray-800"
+                />
+                <button className="bg-[#ff5733] text-white px-4 py-2 hover:bg-[#ff7433] transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400">© 2025 GadgetZ. All rights reserved.</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <i className="fab fa-cc-visa text-2xl text-gray-400"></i>
+              <i className="fab fa-cc-mastercard text-2xl text-gray-400"></i>
+              <i className="fab fa-cc-paypal text-2xl text-gray-400"></i>
+              <i className="fab fa-cc-amex text-2xl text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+      </footer>
+     
     </>
   );
 }
@@ -511,3 +502,83 @@ export default Layout;
 // //         </div>
 // //       </div>
 //    </footer>
+
+//  <footer className="bg-black text-white py-12 px-6 md:px-16">
+//         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+//           {/* Logo and Description */}
+//           <div>
+//             <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
+//               <span className="text-yellow-500 text-4xl">🍂</span> Qohwa
+//             </h2>
+//             <p className="text-sm leading-relaxed">
+//               I am text block. Click edit button to change this text. Lorem
+//               ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+//               luctus nec ullamcorper mattis, pulvinar dapibus leo.
+//             </p>
+//             <div className="flex gap-4 mt-4 text-lg">
+//               <i className="ri-facebook-fill hover:text-yellow-500 cursor-pointer"></i>
+//               <i className="ri-youtube-fill hover:text-yellow-500 cursor-pointer"></i>
+//               <i className="ri-instagram-line hover:text-yellow-500 cursor-pointer"></i>
+//               <i className="ri-linkedin-fill hover:text-yellow-500 cursor-pointer"></i>
+//               <i className="ri-twitter-fill hover:text-yellow-500 cursor-pointer"></i>
+//             </div>
+//           </div>
+
+//           {/* Product */}
+//           <div>
+//             <h3 className="font-bold text-lg mb-4">Product</h3>
+//             <ul className="space-y-2 text-sm">
+//               <li>➤ Discount</li>
+//               <li>➤ New Arrival</li>
+//               <li>➤ Best Selling</li>
+//               <li>➤ Featured</li>
+//               <li>➤ 50% Off</li>
+//             </ul>
+//           </div>
+
+//           {/* Help Center */}
+//           <div>
+//             <h3 className="font-bold text-lg mb-4">Help Center</h3>
+//             <ul className="space-y-2 text-sm">
+//               <li>➤ Returns</li>
+//               <li>➤ Our Offices</li>
+//               <li>➤ Shipping</li>
+//               <li>➤ Payments</li>
+//               <li>➤ Reset Password</li>
+//             </ul>
+//           </div>
+
+//           {/* Contact Us */}
+//           <div>
+//             <h3 className="font-bold text-lg mb-4">Contact us</h3>
+//             <ul className="space-y-2 text-sm">
+//               <li>
+//                 <i className="ri-phone-line mr-2"></i> +61 089 988 8722
+//               </li>
+//               <li>
+//                 <i className="ri-mail-line mr-2"></i> info@yourmail.com
+//               </li>
+//               <li>
+//                 <i className="ri-map-pin-line mr-2"></i> 890 Street Village,
+//                 Atalanta, Italy
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         {/* Bottom Bar */}
+//         <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+//           <p className="text-sm">Copyright © All Right Reserved</p>
+//           <div className="flex gap-3 mt-4 md:mt-0">
+//             <img src="/images/pay.png" alt="Pay" className="h-6" />
+//             <img src="/images/paypal.png" alt="PayPal" className="h-6" />
+//             <img src="/images/visa.png" alt="Visa" className="h-6" />
+//             <img
+//               src="/images/mastercard.png"
+//               alt="MasterCard"
+//               className="h-6"
+//             />
+//             <img src="/images/stripe.png" alt="Stripe" className="h-6" />
+//           </div>
+//         </div>
+//       </footer>

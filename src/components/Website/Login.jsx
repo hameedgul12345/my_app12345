@@ -330,8 +330,8 @@ function Signin() {
                   />
                 </div>
 
-                <button className="md:w-[30%] w-[50%] mt-3 py-2 bg-blue-600 text-white font-semibold rounded-full transition">
-                  Signin
+                <button className="md:w-[30%] w-[50%] mt-3 py-2 bg-[#ff5733] text-white font-semibold rounded-sm transition">
+                  Sign In
                 </button>
 
                 <div className="mt-6 text-center  text-sm -500">
