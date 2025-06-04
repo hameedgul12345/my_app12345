@@ -928,11 +928,11 @@ const productsCamera = [
                   </Swiper>
                 </div>
                 <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
-                  <button onClick={goPrev} className="bg-white p-3 rounded-full shadow-lg hover:bg-[#ff5733] hover:text-white transition-colors duration-300 group">
-                    <i className="fas fa-chevron-up text-[#ff5733] group-hover:text-white"></i>
+                  <button onClick={goPrev} className="bg-white w-8 h-8 font-bold  rounded-full shadow-lg hover:bg-[#ff5733] hover:text-white transition-colors duration-300 group">
+                  <i class="ri-skip-right-line"></i>
                   </button>
-                  <button onClick={goNext} className="bg-white p-3 rounded-full shadow-lg hover:bg-[#ff5733] hover:text-white transition-colors duration-300 group">
-                    <i className="fas fa-chevron-down text-[#ff5733] group-hover:text-white"></i>
+                  <button onClick={goNext} className="bg-white font-bold  w-8 h-8 rounded-full shadow-lg hover:bg-[#ff5733] hover:text-white transition-colors duration-300 group">
+                   <i className="ri-skip-left-line"></i>
                   </button>
                 </div>
               </div>

@@ -62,7 +62,7 @@ function Layout({ children }) {
             src="/images/logo.png"
             style={{ width: "100px", height: "30px" }}
             alt=""
-            id="logo"
+            // id="logo"
             onClick={() => navigate("/")}
             className="cursor-pointer"
           />
@@ -72,7 +72,7 @@ function Layout({ children }) {
             {links.map((link) => (
               <li key={link.link}>
                 <Link
-                  id="link"
+                  // id="link"
                   to={link.link}
                   className={`flex items-center space-x-2 ${
                     location.pathname === link.link ? "text-red-600" : ""
