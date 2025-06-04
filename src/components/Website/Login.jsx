@@ -335,7 +335,7 @@ function Signin() {
                 </button>
 
                 <div className="mt-6 text-center  text-sm -500">
-                  Or Signin with Social Media
+                  Or Sign In with Social Media
                 </div>
 
                 <div className="flex justify-center mt-4 space-x-4">
@@ -353,7 +353,7 @@ function Signin() {
                     onClick={() => navigateToSignup("/signup")}
                     className="text-[#ff5733] font-medium hover:underline cursor-pointer"
                   >
-                    Signup here
+                    Sign Up here
                   </a>
                 </p>
               </div>

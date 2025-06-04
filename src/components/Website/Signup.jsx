@@ -231,7 +231,7 @@ function Signup() {
                     onClick={() => navigateToSignup("/login")}
                     className="text-[#ff5733] font-medium hover:underline cursor-pointer"
                   >
-                    Login here
+                    Log In here
                   </a>
                 </p>
               </div>
