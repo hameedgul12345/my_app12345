@@ -323,7 +323,7 @@ function Home() {
                   />
                 </div>
               </div>
-              <div className="absolute md:top-[470px] top-[500px] md:left-8 left-12 flex justify-start md:justify-center md:mt-0 mt-4 pb-2   gap-4 items-center w-full h-6">
+              <div className="absolute md:top-[470px] top-[480px] md:left-8 left-12 flex justify-start md:justify-center md:mt-0 mt-4 pb-2   gap-4 items-center w-full h-6">
                 <div
                   className={` ${
                     firstButton
@@ -385,7 +385,7 @@ function Home() {
           >
             Why Shop With Us
           </h2>
-          <div className="w-70 mt-4 h-1 mx-auto bg-red-600 mb-10 rounded"></div>
+          <div className="w-80 mt-4 h-1 mx-auto bg-red-600 mb-10 rounded"></div>
 
           <div className=" gap-6 px-4 w-full flex md:flex-row flex-col justify-between  overflow-hidden">
             {features.map((feature, index) => (
