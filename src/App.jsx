@@ -24,6 +24,7 @@ import Reviews from "./components/Panel/Customer/Reviews";
 import CustomerProfile from "./components/Panel/Customer/CustomerProfile";
 import CustomerSettings from "./components/Panel/Customer/CustomerSettings";
 import MyCart from "./components/Website/MyCart";
+import Category from "./components/Website/Category";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+         <Route path="/category" element={<Category/>} />
+        
         <Route path="/categories" element={<Categories />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/login" element={<Login />} />
