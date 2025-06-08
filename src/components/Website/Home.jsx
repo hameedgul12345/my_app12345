@@ -141,7 +141,7 @@ function Home() {
       title: "Gaming Chair",
       price: "$149.99 USD",
       image:
-        "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746563.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
+        "https://img.freepik.com/premium-photo/white-gaming-armchair-3d-rendering-icon-white-background_187882-3344.jpg?uid=R114394203&ga=GA1.1.1840668077.1740570776&semt=ais_items_boosted&w=740",
       reviews: 87,
       estimatedDelivery: "3 - 5 Days",
       inStock: "Available",
@@ -154,7 +154,7 @@ function Home() {
       title: "Office Desk",
       price: "$249.99 USD",
       image:
-        "https://img.freepik.com/free-photo/simple-wood-desk-with-clipboard-laptop_23-2148267475.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
+        "https://img.freepik.com/premium-photo/office-workplace-desk-front-empty-chair-isolated-white-background-neural-network-generated-image_636705-9951.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
       reviews: 65,
       estimatedDelivery: "5 - 7 Days",
       inStock: "Available",
@@ -167,7 +167,7 @@ function Home() {
       title: "Bookshelf",
       price: "$89.99 USD",
       image:
-        "https://img.freepik.com/premium-photo/white-book-shelf-with-books-it-white-background_1059430-90219.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
+        "https://img.freepik.com/premium-photo/white-book-shelf-with-books-it-white-background_1059430-90442.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
       reviews: 48,
       estimatedDelivery: "4 - 6 Days",
       inStock: "Not-Available",
@@ -180,7 +180,7 @@ function Home() {
       title: "Coffee Table",
       price: "$109.99 USD",
       image:
-        "https://img.freepik.com/free-photo/empty-sofa-chair-decoration-living-room_1339-7379.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
+        "https://img.freepik.com/premium-photo/round-coffee-table-end-table-isolated-white-background-with-clipping-path-small-round-white-table-with-3-legs-white-background_1072643-1492.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
       reviews: 51,
       estimatedDelivery: "3 - 5 Days",
       inStock: "Available",
@@ -195,7 +195,7 @@ function Home() {
       title: "Makeup Kit",
       price: "$39.99 USD",
       image:
-        "https://img.freepik.com/premium-photo/set-colorful-cosmetics-pink-table_93675-38107.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
+        "https://img.freepik.com/premium-photo/cosmetic-bag-with-beauty-accessory-makeup-product_479776-456.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
       reviews: 76,
       estimatedDelivery: "2 - 4 Days",
       inStock: "Available",
@@ -208,7 +208,7 @@ function Home() {
       title: "Lipstick Set",
       price: "$24.99 USD",
       image:
-        "https://img.freepik.com/free-photo/view-red-lipsticks-arrangement_23-2148978119.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
+        "https://img.freepik.com/premium-photo/lipsticks-different-colors-arranged-circle_339569-671.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
       reviews: 39,
       estimatedDelivery: "3 - 5 Days",
       inStock: "Available",
@@ -234,7 +234,7 @@ function Home() {
       title: "Perfume Bottle",
       price: "$29.99 USD",
       image:
-        "https://img.freepik.com/free-photo/black-bottle-alcohol-beverage-table_140725-6981.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
+        "https://img.freepik.com/premium-photo/illustration-blank-perfume-bottle-heart-type-isolated-white-background-high-resolution-hig_949828-24116.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
       reviews: 57,
       estimatedDelivery: "3 - 5 Days",
       inStock: "Available",
@@ -249,7 +249,7 @@ function Home() {
       title: "DSLR Camera",
       price: "$499.99 USD",
       image:
-        "https://img.freepik.com/free-photo/photo-camera-still-life_23-2150630961.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
+        "https://img.freepik.com/premium-photo/digital-photo-camera-isolated-white-wall_199107-217.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
       reviews: 112,
       estimatedDelivery: "2 - 4 Days",
       inStock: "Available",
@@ -263,7 +263,7 @@ function Home() {
       title: "Tripod Stand",
       price: "$34.99 USD",
       image:
-        "https://img.freepik.com/free-photo/view-3d-director-s-chair_23-2151069397.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
+        "https://img.freepik.com/premium-photo/black-smartphone-tripod-with-wireless-remote-control-isolated-white-background-with-copy-space_888032-321.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
       reviews: 61,
       estimatedDelivery: "3 - 5 Days",
       inStock: "Available",
@@ -276,7 +276,7 @@ function Home() {
       title: "Action Camera",
       price: "$149.99 USD",
       image:
-        "https://img.freepik.com/free-photo/photo-camera-still-life_23-2150630955.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
+        "https://img.freepik.com/premium-photo/camera-that-has-camera-it_1189726-13049.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
       reviews: 88,
       estimatedDelivery: "3 - 6 Days",
       inStock: "Available",
@@ -290,7 +290,7 @@ function Home() {
       title: "Camera Lens",
       price: "$129.99 USD",
       image:
-        "https://img.freepik.com/premium-psd/circle-with-blue-green-light-it_1020495-300477.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_hybrid&w=740",
+        "https://img.freepik.com/premium-vector/realistic-lens-design_1078-84.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740",
       reviews: 74,
       estimatedDelivery: "4 - 6 Days",
       inStock: "Not-Available",
@@ -475,29 +475,29 @@ function Home() {
             filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white  border-2 border-gray-200 w-[100%] rounded-xl shadow-sm "
+                className="bg-white border-2 border-gray-200 w-full h-[300px] rounded-xl shadow-sm  flex flex-col"
               >
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-[220px] rounded-lg mb-4"
+                  className="w-full h-[220px] object-cover rounded-lg mb-2"
                 />
 
-                <div className="flex flex-row justify-between p-2 pb-2 gap-8">
-                  <h3 className=" text-xl font-bold mt-1">{product.title}</h3>
-                  <p className="text-black font-bold text-sm mt-2">
-                    {product.price}
-                  </p>
+                <div className="flex flex-col justify-center flex-grow px-1">
+                  <h3 className="text-lg font-bold line-clamp-2">
+                    {product.title}
+                  </h3>
+
+                  <div className="flex justify-between items-center ">
+                    <p className="text-black font-semibold text-base">
+                      ${product.price}
+                    </p>
+                    <i
+                      className="ri-arrow-right-line text-xl cursor-pointer hover:text-blue-600 transition"
+                      onClick={() => buyNow(product)}
+                    ></i>
+                  </div>
                 </div>
-                <p className="text-justify p-2">
-                  {product.description.slice(0, 60) + "..."}
-                </p>
-                <button
-                  onClick={() => buyNow(product)}
-                  className="py-2 mx-2  px-4 bg-[#FF6333] rounded-full text-white font-bold w-46 mt-2 mb-4"
-                >
-                  Click to Buy
-                </button>
               </div>
             ))
           ) : (
