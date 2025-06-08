@@ -25,7 +25,7 @@ function SingleProduct() {
 
       <div className="p-6 md:p-12 w-full bg-white text-black flex flex-col lg:flex-row gap-8">
         {/* Left - Image Section */}
-        <div className="flex-1 w-[65%]">
+        <div className="flex-1 w-full md:w-[65%]">
           <div className="relative bg-gray-100 rounded-xl">
             <img
               src={product.image}
@@ -52,7 +52,7 @@ function SingleProduct() {
         </div>
 
         {/* Right - Product Info Section */}
-        <div className="flex-1 space-y-4 border-2 p-4 border-gray-200 w-[35%]">
+        <div className="flex-1 space-y-4 border-2 p-4 border-gray-200 w-full md:w-[35%]">
           <h2 className="text-2xl font-bold">{product.title}</h2>
           <div className="text-yellow-400 text-sm">★★★★★</div>
 
@@ -89,8 +89,8 @@ function SingleProduct() {
       </div>
 
       <h1 className="text-center">Related Products</h1>
-      <div className="flex flex-row justify-center w-full gap-4 px-8 py-4">
-        <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
+      <div className="grid grid-cols-1 w-full md:grid-cols-4 items-center gap-4 mb-6">
+        <div className="md:w-[100%] w-full bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
             src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
@@ -102,7 +102,7 @@ function SingleProduct() {
           </button>
         </div>
 
-        <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
+        <div className="md:w-[100%] w-full bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
             src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
@@ -113,7 +113,7 @@ function SingleProduct() {
             Buy Now
           </button>
         </div>
-        <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
+        <div className="md:w-[100%] w-full bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
             src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
@@ -124,7 +124,7 @@ function SingleProduct() {
             Buy Now
           </button>
         </div>
-        <div className="w-[25%] bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
+        <div className="md:w-[100%] w-full bg-[#ede0bd] rounded-xl flex flex-col justify-center items-center p-6 relative">
           <img
             src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
