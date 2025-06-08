@@ -1,3 +1,5 @@
+import store from "./redux/store";
+import { Provider } from "react-redux";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'animate.css';
@@ -27,8 +29,12 @@ import MyCart from "./components/Website/MyCart";
 import Category from "./components/Website/Category";
 
 function App() {
+  
   return (
-    <BrowserRouter>
+    <Provider store={store}>
+
+
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -54,6 +60,7 @@ function App() {
        <Route path="mycart" element={<MyCart/>} />
       </Routes>
     </BrowserRouter>
+    </Provider>
   );
 }
 

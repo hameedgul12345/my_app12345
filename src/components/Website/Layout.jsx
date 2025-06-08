@@ -39,20 +39,20 @@ function Layout({ children }) {
     },
   ];
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from("#logo", {
-      scale: 0,
-      delay: 0.5,
-      duration: 1,
-    });
-    tl.from("#link", {
-      y: -30,
-      opacity: 0,
-      stagger: 0.2,
-      duration: 0.5,
-    });
-  });
+  // useGSAP(() => {
+  //   const tl = gsap.timeline();
+  //   tl.from("#logo", {
+  //     scale: 0,
+  //     delay: 0.5,
+  //     duration: 1,
+  //   });
+  //   tl.from("#link", {
+  //     y: -30,
+  //     opacity: 0,
+  //     stagger: 0.2,
+  //     duration: 0.5,
+  //   });
+  // });
 
   return (
     <>
