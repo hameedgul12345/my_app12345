@@ -421,7 +421,7 @@ function Home() {
             </p>
             <span
               className="text-sm font-semibold text-black underline underline-offset-4 flex items-center justify-center gap-2 mb-4"
-              onClick={() => navigate("/categories")}
+              onClick={() => navigate("/furniturecategory")}
             >
               Explore category →
             </span>
@@ -475,7 +475,7 @@ function Home() {
             filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white border-2 border-gray-200 w-full h-[300px] rounded-xl shadow-sm  flex flex-col"
+                className="bg-white pt-2 border-2 border-gray-200 w-full h-[300px] rounded-xl shadow-sm  flex flex-col"
               >
                 <img
                   src={product.image}
@@ -483,7 +483,7 @@ function Home() {
                   className="w-full h-[220px] object-cover rounded-lg mb-2"
                 />
 
-                <div className="flex flex-col justify-center flex-grow px-1">
+                <div className="flex flex-col justify-center flex-grow px-2">
                   <h3 className="text-lg font-bold line-clamp-2">
                     {product.title}
                   </h3>
