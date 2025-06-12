@@ -15,16 +15,37 @@ function Home() {
         "https://img.freepik.com/premium-photo/modern-living-room-interior-design_469760-22774.jpg",
     },
     {
-      title: "Cameras",
+      title: "Home Decor",
       description:
-        "Capture your best moments with our collection of high-quality cameras, from professional DSLRs to compact action cams and essential accessories.",
+        "Discover unique home decor items to enhance your living space, including wall art, decorative pillows, rugs, and lighting solutions that add personality and warmth.",
       image:
         "https://img.freepik.com/premium-photo/dslr-camera-white_144962-4376.jpg",
     },
     {
-      title: "Cosmetics",
+      title: "Accessories",
       description:
-        "Discover beauty essentials and skincare products including makeup kits, lipsticks, creams, and fragrances to enhance your natural glow.",
+        "Find the perfect accessories to complement your style, from trendy bags and wallets to elegant jewelry and watches that add a touch of sophistication to any outfit.",
+      image:
+        "https://img.freepik.com/free-photo/still-life-care-products_23-2149371308.jpg",
+    },
+    {
+      title: "Clothing",
+      description:
+        "Explore our latest clothing collection featuring trendy outfits, comfortable loungewear, and stylish accessories for every occasion.",
+      image:
+        "https://img.freepik.com/free-photo/still-life-care-products_23-2149371308.jpg",
+    },
+    {
+      title: "Handicrafts",
+      description:
+        "Discover unique handicrafts and artisanal products that showcase traditional craftsmanship, perfect for adding a personal touch to your home or gifting.",
+      image:
+        "https://img.freepik.com/free-photo/still-life-care-products_23-2149371308.jpg",
+    },
+    {
+      title: "Health & Beauty",
+      description:
+        "Explore our health and beauty products, including skincare, haircare, and wellness items designed to enhance your natural beauty and well-being.",
       image:
         "https://img.freepik.com/free-photo/still-life-care-products_23-2149371308.jpg",
     },
@@ -344,6 +365,24 @@ function Home() {
     },
   ];
 
+  const selectCategory = (item) => {
+    if (item.title === "Furniture") {
+      navigate("/furniture");
+    } else if (item.title === "Home Decor") {
+      navigate("/homedecor");
+    } else if (item.title === "Accessories") {
+      navigate("/accessories");
+    } else if (item.title === "Clothing") {
+      navigate("/clothing");
+    } else if (item.title === "Handicrafts") {
+      navigate("/handicrafts");
+    } else if (item.title === "Health & Beauty") {
+      navigate("/healthandbeauty");
+    } else {
+      console.warn("No navigation path defined for:", item.title);
+    }
+  };
+
   const categories = ["All", "Furniture", "Cosmetics", "Cameras"];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -361,13 +400,14 @@ function Home() {
 
   const buyNow = (product) => {
     dispatch(storeProducts(product));
+    console.log(product);
     navigate("/singleproduct");
   };
 
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-4 bg-white">
+      {/* <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-4 bg-white">
         <div className="md:w-1/2 text-center md:text-left space-y-6">
           <h1
             className="text-2xl  md:text-5xl font-bold text-[#FF6433] leading-tight"
@@ -402,34 +442,96 @@ function Home() {
             className="w-full object-cover"
           />
         </div>
-      </div>
+      </div> */}
+
+      <section className="relative min-h-[70vh] flex items-center pb-8">
+        {/* Banner Image Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://img.freepik.com/premium-photo/black-friday-background-copy-space_198067-41160.jpg?ga=GA1.1.1047794960.1739353080&semt=ais_items_boosted&w=740"
+            alt="Local marketplace banner"
+            className="w-full md:h-screen object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white space-y-8">
+            <div className="space-y-12">
+              <h1 className="text-4xl py-8 md:text-6xl lg:text-7xl font-bold leading-tight">
+                Bringing Local
+                <br />
+                <span className="text-[#FF6433]">Creativity to Life</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
+                Discover and rent unique local products from talented creators
+                in your community. From handcrafted furniture to beautiful
+                decor.
+              </p>
+            </div>
+
+            {/* Replaced Button Components */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                className="group bg-[#FF6433] hover:bg-[#FF6433] text-white font-semibold px-6 py-3 rounded-lg text-lg flex items-center"
+                // onClick={() => navigate('/products')}
+              >
+                Get Started
+                <span className="ml-2 transition-transform group-hover:translate-x-1">
+                  ➡️
+                </span>
+              </button>
+              <button className="border border-white bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-lg text-lg flex items-center">
+                <span className="mr-2">🛡️</span>
+                Verify Identity to Build Trust
+              </button>
+            </div>
+
+            <div className="flex items-center justify-center gap-12 text-sm text-gray-300 pt-8">
+              <div className="text-center">
+                <div className="font-semibold text-white text-2xl">1000+</div>
+                <div>Local Products</div>
+              </div>
+              <div className="text-center">
+                <div className="font-semibold text-white text-2xl">500+</div>
+                <div>Verified Vendors</div>
+              </div>
+              <div className="text-center">
+                <div className="font-semibold text-white text-2xl">100%</div>
+                <div>Secure Rentals</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Category Section */}
-      <h1 className="text-center text-2xl text-[#FF6433]  md:text-5xl font-bold my-4">
+      <h1 className="text-center text-2xl text-[#FF6433]  md:mt-22  md:text-5xl font-bold my-4">
         Product Categories
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-12 bg-white">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-2 py-2 bg-white">
         {category.map((cat) => (
           <div
             key={cat.title}
-            className="rounded-3xl shadow-md text-center p-6 hover:shadow-lg cursor-pointer transition-all"
+            className="rounded-3xl shadow-md text-center  hover:shadow-lg cursor-pointer transition-all"
             onClick={() => setSelectedCategory(cat.title)}
           >
-            <h2 className="text-xl font-semibold mb-2">{cat.title}</h2>
-            <p className="text-sm text-justify text-gray-500 mb-4">
-              {cat.description}
-            </p>
-            <span
-              className="text-sm font-semibold text-black underline underline-offset-4 flex items-center justify-center gap-2 mb-4"
-              onClick={() => navigate("/furniturecategory")}
-            >
-              Explore category →
-            </span>
             <img
               src={cat.image}
               alt={cat.title}
-              className="mx-auto h-40 object-contain"
+              className="mx-auto rounded-3xl h-40 object-contain"
             />
+            <h2 className="text-xl font-semibold mb-2">{cat.title}</h2>
+            {/* <p className="text-sm text-justify text-gray-500 mb-4">
+              {cat.description.slice(0, 20)}...
+            </p> */}
+            <span
+              className="text-sm font-semibold text-black underline underline-offset-4 flex items-center justify-center gap-2 mb-4"
+              onClick={() => selectCategory(cat)}
+            >
+              Explore category →
+            </span>
           </div>
         ))}
       </div>

@@ -107,7 +107,7 @@ const allProducts = [
   },
 ];
 
-function FurnitureCategory() {
+function CosmeticaCategory() {
   const [index, setIndex] = useState(0);
   const visibleCount = 5; // Show 3 items at a time
   const [selectedCategory, setSelectedCategory] = useState("Gear");
@@ -347,4 +347,4 @@ function FurnitureCategory() {
   );
 }
 
-export default FurnitureCategory;
+export default CosmeticaCategory;

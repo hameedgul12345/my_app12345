@@ -107,7 +107,7 @@ const allProducts = [
   },
 ];
 
-function FurnitureCategory() {
+function CamerasCategory() {
   const [index, setIndex] = useState(0);
   const visibleCount = 5; // Show 3 items at a time
   const [selectedCategory, setSelectedCategory] = useState("Gear");
@@ -277,9 +277,9 @@ function FurnitureCategory() {
           </div>
         </div>
 
-        <div className="flex w-full min-h-screen px-6 py-10 bg-white">
+        <div className="flex flex-row justify-between w-full min-h-screen px-6 py-10 bg-white">
           {/* Sidebar */}
-          <aside className="w-1/4 pr-6 border-r border-gray-200">
+          <aside className="w-[35%] pr-6 border-r border-gray-200">
             <h2 className="text-lg font-semibold mb-4">Explore by category</h2>
             <ul className="mb-10">
               {categories.map((cat) => (
@@ -318,7 +318,7 @@ function FurnitureCategory() {
           </aside>
 
           {/* Product Grid */}
-          <main className="w-3/4 pl-6">
+          <main className="w-[65%] pl-6">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {filteredProducts.map((product) => (
                 <div
@@ -347,4 +347,4 @@ function FurnitureCategory() {
   );
 }
 
-export default FurnitureCategory;
+export default CamerasCategory
