@@ -35,7 +35,13 @@ import Accessories from "./components/Website/Accessories";
 import Handicrafts from "./components/Website/Handicrafts";
 import Clating from "./components/Website/Clothing";
 import AdminDashboard from "./components/Panel/Admin/AdminDashboard";
-import AdminProducts from "./components/Panel/Admin/AdminProducts";
+import AdminProducts from "./components/Panel/Admin/AdminProduct";
+import AdminOrders from "./components/Panel/Admin/AdminOrders";
+import AdminCustomers from "./components/Panel/Admin/AdminCustomers";
+import AdminSeller from "./components/Panel/Admin/AdminSeller";
+import AdminReports from "./components/Panel/Admin/AdminReports";
+import AdminSettings from "./components/Panel/Admin/AdminSettings";
+import AdminLogout from "./components/Panel/Admin/AdminLogout";
 
 function App() {
   return (
@@ -89,37 +95,37 @@ function App() {
           <Route
             path="/admin/orders"
             element={
-              <h1 className="bg-blue-600 p-4 text-white">Manage Orders</h1>
+              <AdminOrders/>
             }
           />
           <Route
             path="/admin/customers"
             element={
-              <h1 className="bg-blue-600 p-4 text-white">Manage Customers</h1>
+              <AdminCustomers/>
             }
           />
           <Route
             path="/admin/sellers"
             element={
-              <h1 className="bg-blue-600 p-4 text-white">Manage Sellers</h1>
+            <AdminSeller/>
             }
           />
           <Route
             path="/admin/reports"
             element={
-              <h1 className="bg-blue-600 p-4 text-white">View Reports</h1>
+              <AdminReports/>
             }
           />
           <Route
             path="/admin/settings"
             element={
-              <h1 className="bg-blue-600 p-4 text-white">Admin Settings</h1>
+             <AdminSettings/>
             }
           />
           <Route
             path="/admin/logout"
             element={
-              <h1 className="bg-blue-600 p-4 text-white">Admin Logout</h1>
+              <AdminLogout/>
             }
           />
         </Routes>
